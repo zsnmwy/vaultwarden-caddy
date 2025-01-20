@@ -1,0 +1,10 @@
+{
+    layer4 {
+        0.0.0.0:6443 {
+            @secure tls
+            route @secure {
+                proxy {$KUBERNETES_PORT_443_TCP_ADDR}:{$KUBERNETES_PORT_443_TCP_PORT}
+            } 
+        }
+    }
+}

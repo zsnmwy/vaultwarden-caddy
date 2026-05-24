@@ -5,10 +5,11 @@
 - GitHub Actions 工作流：`.github/workflows/build-ghcr.yml`
 - 触发方式：手动触发 + 每月一次定时触发
 - 定时表达式：`0 3 1 * *`（UTC），即北京时间每月 1 日 11:00
-- 产物仓库：`ghcr.io/zsnmwy/vaultwarden-caddy-cloudflare`
+- 产物仓库：`zsnmwy/vaultwarden-caddy-cloudflare`
 - 构建目标：根目录 `Dockerfile`
-- 支持平台：`linux/amd64`、`linux/arm64`
-- 推送标签：`latest`、`YYYYMM`、`sha-<7位提交>`
+- 支持平台：`linux/amd64`
+- 手动触发默认版本标签：`7`
+- 推送标签：`latest`、`<手动输入版本标签或YYYYMM>`、`sha-<7位提交>`
 
 ## POD ENV
 
